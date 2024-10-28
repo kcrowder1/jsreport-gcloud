@@ -1,30 +1,30 @@
 {
-    "httpPort": 5488,
-    "trustUserCode": true,
-    "reportTimeout": 60000,
-    "workers": {
-        "numberOfWorkers": 2
+  "httpPort": 5488,
+  "trustUserCode": false,
+  "reportTimeout": 60000,
+  "workers": {
+    "numberOfWorkers": 2
+  },
+  "store": {
+    "provider": "fs"
+  },
+  "blobStorage": {
+    "provider": "fs"
+  },
+  "logger": {
+    "console": {
+      "transport": "console",
+      "level": "debug"
     },
-    "store": {
-        "provider": "fs"
+    "file": {
+      "transport": "file",
+      "level": "info",
+      "filename": "logs/reporter.log"
     },
-    "blobStorage": {
-        "provider": "fs"
-    },
-    "logger": {
-        "console": {
-            "transport": "console",
-            "level": "debug"
-        },
-        "file": {
-            "transport": "file",
-            "level": "info",
-            "filename": "logs/reporter.log"
-        },
-        "error": {
-            "transport": "file",
-            "level": "error",
-            "filename": "logs/error.log"
-        }
+    "error": {
+      "transport": "file",
+      "level": "error",
+      "filename": "logs/error.log"
     }
+  }
 }
