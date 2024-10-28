@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "deploy": "gcloud services enable run.googleapis.com&&gcloud functions deploy jsreport --memory=512MB --gen2 --region=us-central1 --runtime=nodejs18 --source=. --entry-point=jsreport --trigger-http",
-    "gcp-build": "node node_modules/puppeteer/install.js"
+    "gcp-build": "node node_modules/puppeteer/install.mjs"
   },
   "author": "",
   "license": "ISC",
